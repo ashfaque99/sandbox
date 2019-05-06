@@ -1,0 +1,23 @@
+/* ==========================================================================
+   Hassan custom responsive styles
+   ========================================================================== */
+@media screen and (min-width: 1400px) {
+}
+@media screen and (min-width: 1600px) {
+}
+@media screen and (min-width: 1900px) {
+}
+/*992*/
+@media (max-width: 1199px) {
+}
+/*768*/
+@media (max-width: 991px) {
+}
+/*551*/
+@media (max-width: 767px) {
+}
+/*320*/
+@media(max-width:550px) {
+}
+@media(max-width:340px) {
+}

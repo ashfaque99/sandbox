@@ -121,21 +121,45 @@ add_action( 'widgets_init', 'sandbox_widgets_init' );
  */
 function sandbox_scripts() {
 	
-	wp_enqueue_style( 'sandbox-style', get_stylesheet_uri() );
-
+	//Styles
 	wp_enqueue_style( 'bootstrap', get_stylesheet_directory_uri() . '/css/bootstrap.min.css', array(), 20141119 );
-
+	wp_enqueue_style( 'fonts', '//fonts.googleapis.com/css?family=Ubuntu:300,400,700,900');
+	wp_enqueue_style( 'fontawesome', '//use.fontawesome.com/releases/v5.7.2/css/all.css');
+	wp_enqueue_style( 'slick', get_stylesheet_directory_uri() . '/css/slick.css', array(), 20141119 );
+	wp_enqueue_style( 'slick-theme', get_stylesheet_directory_uri() . '/css/slick-theme.css', array(), 20141119 );
+	wp_enqueue_style( 'sandbox-style', get_stylesheet_uri() );
+ 
+	//Scripts
+	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '20120206', true );
+	wp_enqueue_script( 'slick-js', get_template_directory_uri() . '/js/slick.min.js', array('jquery'), '20120206', true );
+	wp_enqueue_script( 'script-js', '//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', array('jquery'), true);
+	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array('jquery'), '20120206', true );
 	wp_enqueue_script( 'sandbox-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
 	wp_enqueue_script( 'sandbox-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '20120206', true );
+	
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'sandbox_scripts' );
+
+
+
+function userLoginCheck(){
+		if ( is_user_logged_in() ) {
+			function my_custom_styles()
+				{	echo "	<style>.custom-navbar{ margin-top: 30px; }	</style>"; }
+				
+				add_action('wp_head', 'my_custom_styles', 100);
+			
+		} else {
+			
+		}
+}
+add_action('init', 'userLoginCheck');
+
+
 
 /**
  * Implement the Custom Header feature.
