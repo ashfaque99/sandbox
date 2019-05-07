@@ -261,6 +261,48 @@ At Blue Frontier, we love to create, not copy! Our dedicated team of specialists
     </div>
   </section>
 
+  <section class="video-section">
+       <div class="container">
+           <div class="row">
+               <div class="col-md-6 video-section-left">
+                    <h2>Instapage saved $2.3M with Upwork</h2>
+                    <p class="lead-intro">"Upwork took a lot of stress off of growing with minimal resources"</p>  
+                    <div>
+                        <div class="author-img pull-left"><img src="<?php echo get_template_directory_uri();?>/img/avatar.png" alt=""></div>
+                    </div>  
+                    <div class="author-text pull-left">
+                        <small>
+                            <strong>Tyson Quick</strong>
+                            <br>
+                            <span>CEO and co-founder, Instapage</span>
+                        </small>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+
+
+
+               <div class="col-md-6 video-section-right">
+
+
+                    
+                </head>
+                <body>
+                    <video id='my-video' class='video-js' controls preload='auto' width='558' height='312'
+                        poster='<?php echo get_template_directory_uri();?>/img/video-cover.jpg' data-setup='{}'>
+                        <source src='<?php echo get_template_directory_uri();?>/video/video.mp4' type='video/mp4'>
+                        <p class='vjs-no-js'>
+                            To view this video please enable JavaScript, and consider upgrading to a web browser that
+                            <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
+                        </p>
+                    </video>
+
+               </div>
+           </div>
+       </div>
+    </section>
+
 
 <?php
 get_footer();

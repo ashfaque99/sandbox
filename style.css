@@ -448,24 +448,94 @@ footer .social-links .linkedin{
 
 
 /* ==========================================================================
- Azhar custom responsive styles
+ contact-section styles
  ========================================================================== */
+ .contact-section{
+    margin-top: 60px;
+    padding: 50px 0px;
+ }
 
-/*992*/
-@media (max-width: 1199px) {
+ .contact-section h1 {
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 700;
+  color: #333;
 }
 
-/*768*/
-@media (max-width: 991px) {
+.contact-section-right-icons{
+  margin-top: 20px;
+  margin-left: 40px;
 }
-/*551*/
-@media (max-width: 767px) {
+
+.contact-section-right-text{
+  margin-top: 20px;
+  margin-left: 20px;
 }
-/*320*/
-@media(max-width:550px) {
+
+.contact-section-right-icons div{
+   margin: 40px 0px;
 }
-@media(max-width:340px) {
+
+.contact-section-right-text div{
+   margin: 40px 0px;
 }
+  /* .contact-section-right span{
+    font-size: 18px;
+    margin-left: 48px; 
+  }
+
+  .contact-section-right .phone-div i{
+    text-align: left;
+  } */
+
+
+/*
+ * ─────────────────────────────────────────────.VIDEO SECTION CSS ─────
+ */
+.video-section{
+    background: #494949;
+    color: #a0a0a0;
+}
+
+.video-section-left{
+    padding: 100px 30px 100px 20px;
+}
+
+.video-section-right{
+   padding: 80px 20px;
+}
+
+
+.video-section h2{
+    font-size: 38px;
+    line-height: 43px;
+    font-weight: 700;
+    color:#fff;
+    margin-bottom: 30px;
+}
+
+.video-section .lead-intro{
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 34px;
+}
+
+.video-section .author-text{
+    font-size: 15px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+.video-section .author-img img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────────── */
+
 
 
 

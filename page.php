@@ -15,26 +15,40 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', 'page' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
+		<section class="contact-section">
+			<div class="container">
+				<div class="row">  
+					<div class="col-md-12 text-center">
+						<h1><?php echo get_the_title();?></h1>
+						<h2>We'd LOVE to help!</h2>
+						<p>We like to create things with fun, open-minded people, Feel free to say hello!</p>
+						<br>
+					</div>
+				</div>	
+				<div class="row">
+					<div class="col-md-2"></div>
+					<div class="col-md-8 contact-section-left">
+						<form action="/action_page.php">
+							<div class="form-group">
+								<label for="email">Your Email Address</label>
+								<input type="email" class="form-control" id="email" placeholder="you@example.com" name="email">
+							</div>
+							<div class="form-group">
+								<label for="subject">Your Message:</label>
+								<input type="text" class="form-control" id="subject" placeholder="Subject (optional but helpful)" name="pwd">
+							</div>
+							<div class="form-group">
+								<label for="comment">Comment:</label>
+								<textarea class="form-control" rows="5" id="comment"></textarea>
+							</div>
+						
+							<button type="submit" class="btn btn-primary">Send</button>
+						</form>	
+					</div>
+					<div class="col-md-2"></div>
+				</div>
+			</div>
+		</section>
+ 
 <?php
-get_sidebar();
 get_footer();
